@@ -1,0 +1,106 @@
+{
+  "name": "biar-fca",
+  "version": "3.9.5",
+  "module": "commonjs",
+  "types": "src/types/index.d.ts",
+  "description": "Advanced Facebook Chat API (FCA) library with built-in anti-detection protection and automatic cookie refresh. Pure npm package for building reliable Messenger bots - forked from ws3-fca",
+  "main": "module/index.js",
+  "files": [
+    "module/",
+    "src/",
+    "LICENSE-MIT",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "mocha tests/**/*.test.js --timeout 10000 --exit",
+    "test:watch": "mocha tests/**/*.test.js --watch",
+    "test:coverage": "nyc --reporter=text --reporter=html mocha tests/**/*.test.js --timeout 10000 --exit",
+    "lint": "eslint src/**/*.js module/**/*.js",
+    "lint:fix": "eslint src/**/*.js module/**/*.js --fix",
+    "format": "prettier --write \"src/**/*.js\" \"module/**/*.js\" \"tests/**/*.js\"",
+    "format:check": "prettier --check \"src/**/*.js\" \"module/**/*.js\" \"tests/**/*.js\"",
+    "audit": "npm audit",
+    "audit:fix": "npm audit fix",
+    "prepublishOnly": "echo 'Preparing to publish biar-fca...'",
+    "docs": "jsdoc -c jsdoc.json",
+    "start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jubiar01/biar-fca"
+  },
+  "author": "Jubiar",
+  "contributors": [
+    "NethWs3Dev (Kenneth Aceberos)",
+    "Choru Official (Johnsteve Costaños)",
+    "Jonell Huthin Magallanes"
+  ],
+  "community": "Exocore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jubiar01/biar-fca/issues"
+  },
+  "homepage": "https://github.com/Jubiar01/biar-fca#readme",
+  "keywords": [
+    "facebook",
+    "chat",
+    "api",
+    "fca",
+    "biar",
+    "biar-chat-api",
+    "biar-fca",
+    "exocore",
+    "nextgen"
+  ],
+  "dependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "axios": "^1.9.0",
+    "axios-cookiejar-support": "^5.0.5",
+    "chalk": "^3.0.0",
+    "cheerio": "^1.0.0",
+    "deepdash": "^5.3.9",
+    "express": "^4.19.2",
+    "form-data": "^4.0.3",
+    "freeport": "^1.0.5",
+    "gradient-string": "^1.1.0",
+    "https-proxy-agent": "^4.0.0",
+    "jsonpath-plus": "^10.3.0",
+    "lodash": "^4.17.21",
+    "mqtt": "^5.15.0",
+    "node-cron": "^3.0.3",
+    "tough-cookie": "^5.1.2",
+    "undici": "^7.0.0",
+    "user-agents": "^1.1.669",
+    "websocket-stream": "5.3.0"
+  },
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@types/axios": "^0.9.36",
+    "@types/chai": "^4.3.11",
+    "@types/express": "^4.17.21",
+    "@types/form-data": "^2.2.1",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^22.13.11",
+    "@types/sinon": "^17.0.2",
+    "@types/tough-cookie": "^4.0.5",
+    "chai": "^4.4.1",
+    "eslint": "^8.56.0",
+    "jsdoc": "^4.0.2",
+    "mocha": "^10.3.0",
+    "nyc": "^15.1.0",
+    "prettier": "^3.2.4",
+    "sinon": "^17.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "overrides": {
+    "axios-cookiejar-support": {
+      "http-cookie-agent": "^7.0.3"
+    },
+    "serialize-javascript": "^7.0.4"
+  },
+  "engines": {
+    "node": ">=20.x"
+  }
+}
